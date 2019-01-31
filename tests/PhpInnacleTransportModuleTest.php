@@ -1,7 +1,7 @@
 <?php
 
 /**
- * phpinnacle transport module for PHP Service Bu
+ * phpinnacle RabbitMQ transport module
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -40,6 +40,8 @@ final class PhpInnacleTransportModuleTest extends TestCase
             'test',
             'qwerty'
         );
+
+        $module->configureQos(10, 100, true);
 
         $module->boot($containerBuilder);
 

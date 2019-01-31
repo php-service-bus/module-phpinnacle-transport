@@ -1,7 +1,7 @@
 <?php
 
 /**
- * phpinnacle transport module for PHP Service Bus
+ * phpinnacle RabbitMQ transport module
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT

@@ -1,8 +1,14 @@
 {
   "name": "php-service-bus/module-phpinnacle-transport",
-  "description": "phpinnacle transport module",
+  "description": "phpinnacle RabbitMQ transport module",
   "type": "library",
-  "keywords": ["cqrs", "event-sourcing", "async-php", "command-bus", "messaging"],
+  "keywords": [
+    "async-php",
+    "command-bus",
+    "messaging",
+    "amqp",
+    "rabbitmq"
+  ],
   "authors": [
     {
       "name": "Masiukevich Maksim",
@@ -19,8 +25,11 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "ServiceBus\\Transport\\Module\\Tests\\": "tests/",
-      "ServiceBus\\Common\\Tests\\": "vendor/php-service-bus/common/tests"
+      "ServiceBus\\Common\\Tests\\": "vendor/php-service-bus/common/tests",
+      "ServiceBus\\Transport\\Common\\Tests\\": "vendor/php-service-bus/transport-common/tests",
+      "ServiceBus\\Transport\\Amqp\\Tests\\": "vendor/php-service-bus/transport-amqp/tests",
+      "ServiceBus\\Transport\\PhpInnacle\\Tests\\": "vendor/php-service-bus/transport-phpinnacle/tests",
+      "ServiceBus\\Transport\\Module\\Tests\\": "tests/"
     }
   },
   "require": {
@@ -31,7 +40,7 @@
   "require-dev": {
     "symfony/dependency-injection": "^v4.2",
     "phpunit/phpunit": "^7",
-    "vimeo/psalm": "^3"
+    "vimeo/psalm": "dev-master"
   },
   "prefer-stable": true,
   "minimum-stability": "dev",

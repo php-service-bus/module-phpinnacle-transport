@@ -4,7 +4,30 @@
 
 ## What is it?
 
-Module for working with RabbitMQ (via [phpinnacle/ridge](https://github.com/phpinnacle/ridge)) in [service-bus](https://github.com/php-service-bus/service-bus) framework
+Module for working with RabbitMQ (via [phpinnacle/ridge](https://github.com/phpinnacle/ridge)) transport implementation
 
-Contains packages:
-* [php-service-bus/transport-phpinnacle](https://github.com/php-service-bus/transport-phpinnacle)
+## Installation
+
+```bash
+composer req php-service-bus/module-phpinnacle-transport
+```
+
+Example of module creation
+
+```php
+$module = new PhpInnacleTransportModule(
+   'amqp://guest:guest@localhost:5672', // Connection DSN
+   'exchangeName',                      // Default exchange name
+   'queueName'                          // The queue we will listen to
+);
+```
+The [configureQos()](https://github.com/php-service-bus/module-phpinnacle-transport/blob/master/src/PhpInnacleTransportModule.php#L82) method is used to configure the QoS parameters
+```php
+$module->configureQos(10, 100, true);
+```
+
+Enable module:
+
+```php
+$bootstrap->applyModules($module);
+```
