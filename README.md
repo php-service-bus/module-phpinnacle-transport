@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/php-service-bus/module-phpinnacle-transport.svg?branch=master)](https://travis-ci.org/php-service-bus/module-phpinnacle-transport)
-[![Code Coverage](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/?branch=master)
+[![Build Status](https://travis-ci.org/php-service-bus/module-phpinnacle-transport.svg?branch=v3.0)](https://travis-ci.org/php-service-bus/module-phpinnacle-transport)
+[![Code Coverage](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/badges/coverage.png?b=v3.0)](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/?branch=v3.0)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/badges/quality-score.png?b=v3.0)](https://scrutinizer-ci.com/g/php-service-bus/module-phpinnacle-transport/?branch=v3.0)
 
 ## What is it?
 
@@ -21,7 +21,7 @@ $module = new PhpInnacleTransportModule(
    'queueName'                          // The queue we will listen to
 );
 ```
-The [configureQos()](https://github.com/php-service-bus/module-phpinnacle-transport/blob/master/src/PhpInnacleTransportModule.php#L82) method is used to configure the QoS parameters
+The [configureQos()](https://github.com/php-service-bus/module-phpinnacle-transport/blob/v3.0/src/PhpInnacleTransportModule.php#L82) method is used to configure the QoS parameters
 ```php
 $module->configureQos(10, 100, true);
 ```
