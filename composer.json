@@ -34,7 +34,7 @@
   },
   "require": {
     "php": ">=7.2",
-    "php-service-bus/transport-phpinnacle": "^v3.0",
+    "php-service-bus/transport-phpinnacle": "v3.0.x-dev",
     "phpinnacle/ridge": "^0.1"
   },
   "require-dev": {

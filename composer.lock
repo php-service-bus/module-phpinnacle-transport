@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d21d55b67f75aeb2a6128a62d1a3885f",
-    "content-hash": "88a63b69657d1a501326a594fbbf9e1c",
+    "hash": "77f84fae33a67d81484e1846defb952b",
+    "content-hash": "b4b9a82639d2014ff7dfb5e250ea7904",
     "packages": [
         {
             "name": "amphp/amp",
@@ -609,16 +609,16 @@
         },
         {
             "name": "php-service-bus/common",
-            "version": "v3.0.2",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/common.git",
-                "reference": "71e9167bdec0e245cc77bc7fbb37c250481693ef"
+                "reference": "4832b5b1cf702eac55edddfdb62325aa20d5ba11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/common/zipball/71e9167bdec0e245cc77bc7fbb37c250481693ef",
-                "reference": "71e9167bdec0e245cc77bc7fbb37c250481693ef",
+                "url": "https://api.github.com/repos/php-service-bus/common/zipball/4832b5b1cf702eac55edddfdb62325aa20d5ba11",
+                "reference": "4832b5b1cf702eac55edddfdb62325aa20d5ba11",
                 "shasum": ""
             },
             "require": {
@@ -627,7 +627,7 @@
                 "ramsey/uuid": "^3.7"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
+                "phpunit/phpunit": "^7",
                 "symfony/dependency-injection": "^v4.2",
                 "vimeo/psalm": "^3"
             },
@@ -658,26 +658,26 @@
                 "command-bus",
                 "messaging"
             ],
-            "time": "2019-02-15 09:15:23"
+            "time": "2019-02-07 11:11:38"
         },
         {
             "name": "php-service-bus/transport-amqp",
-            "version": "v3.0.2",
+            "version": "v3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-amqp.git",
-                "reference": "d1d4462e8f8fa4bd026162b74081404d83e056db"
+                "reference": "778668e8735390a9104bc5beebf814ccd0111570"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-amqp/zipball/d1d4462e8f8fa4bd026162b74081404d83e056db",
-                "reference": "d1d4462e8f8fa4bd026162b74081404d83e056db",
+                "url": "https://api.github.com/repos/php-service-bus/transport-amqp/zipball/778668e8735390a9104bc5beebf814ccd0111570",
+                "reference": "778668e8735390a9104bc5beebf814ccd0111570",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2",
                 "php-service-bus/common": "^v3.0",
-                "php-service-bus/transport-common": "^v3.0"
+                "php-service-bus/transport-common": "v3.0.x-dev"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8",
@@ -708,20 +708,20 @@
                 "command-bus",
                 "messaging"
             ],
-            "time": "2019-02-15 10:12:03"
+            "time": "2019-02-22 10:39:41"
         },
         {
             "name": "php-service-bus/transport-common",
-            "version": "v3.0.2",
+            "version": "v3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-common.git",
-                "reference": "1a5d088a9a85fdfa1053b93606f929ae3d68233a"
+                "reference": "89c2c7ef4316d1053cf8835e7b083203e7eb28d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-common/zipball/1a5d088a9a85fdfa1053b93606f929ae3d68233a",
-                "reference": "1a5d088a9a85fdfa1053b93606f929ae3d68233a",
+                "url": "https://api.github.com/repos/php-service-bus/transport-common/zipball/89c2c7ef4316d1053cf8835e7b083203e7eb28d2",
+                "reference": "89c2c7ef4316d1053cf8835e7b083203e7eb28d2",
                 "shasum": ""
             },
             "require": {
@@ -756,26 +756,26 @@
                 "command-bus",
                 "messaging"
             ],
-            "time": "2019-02-15 10:09:25"
+            "time": "2019-02-22 10:49:49"
         },
         {
             "name": "php-service-bus/transport-phpinnacle",
-            "version": "v3.0.3",
+            "version": "v3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-phpinnacle.git",
-                "reference": "6d02a280229ad4448f134253f4ee0b3b9507e94a"
+                "reference": "7e240fea19299bff2d1e7352ed802df86929bb5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/6d02a280229ad4448f134253f4ee0b3b9507e94a",
-                "reference": "6d02a280229ad4448f134253f4ee0b3b9507e94a",
+                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/7e240fea19299bff2d1e7352ed802df86929bb5a",
+                "reference": "7e240fea19299bff2d1e7352ed802df86929bb5a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2",
-                "php-service-bus/common": "^v3.0",
-                "php-service-bus/transport-amqp": "^v3.0",
+                "php-service-bus/common": "v3.0",
+                "php-service-bus/transport-amqp": "v3.0.x-dev",
                 "phpinnacle/ridge": "^0.1"
             },
             "require-dev": {
@@ -808,7 +808,7 @@
                 "messaging",
                 "rabbitmq"
             ],
-            "time": "2019-02-20 17:54:34"
+            "time": "2019-02-22 10:53:32"
         },
         {
             "name": "phpinnacle/buffer",
@@ -3399,7 +3399,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "php-service-bus/transport-phpinnacle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
