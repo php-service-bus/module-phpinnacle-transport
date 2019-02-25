@@ -34,8 +34,7 @@
   },
   "require": {
     "php": ">=7.2",
-    "php-service-bus/transport-phpinnacle": "^v3.0",
-    "phpinnacle/ridge": "^0.1"
+    "php-service-bus/transport-phpinnacle": "v3.0.x-dev"
   },
   "require-dev": {
     "symfony/dependency-injection": "^v4.2",
