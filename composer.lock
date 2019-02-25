@@ -765,12 +765,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-phpinnacle.git",
-                "reference": "f4a0da1f53a7fbc8aaad82c69e9ca6042fe14480"
+                "reference": "0efe5514763300999720b36f1b4bdd9901a3061c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/f4a0da1f53a7fbc8aaad82c69e9ca6042fe14480",
-                "reference": "f4a0da1f53a7fbc8aaad82c69e9ca6042fe14480",
+                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/0efe5514763300999720b36f1b4bdd9901a3061c",
+                "reference": "0efe5514763300999720b36f1b4bdd9901a3061c",
                 "shasum": ""
             },
             "require": {
@@ -809,7 +809,7 @@
                 "messaging",
                 "rabbitmq"
             ],
-            "time": "2019-02-25 14:40:14"
+            "time": "2019-02-25 15:39:58"
         },
         {
             "name": "phpinnacle/buffer",
