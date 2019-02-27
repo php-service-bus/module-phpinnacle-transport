@@ -1,7 +1,7 @@
 <?php
 
 /**
- * phpinnacle RabbitMQ transport module
+ * phpinnacle RabbitMQ transport module.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -26,9 +26,9 @@ final class PhpInnacleTransportModuleTest extends TestCase
     /**
      * @test
      *
-     * @return void
-     *
      * @throws \Throwable
+     *
+     * @return void
      */
     public function boot(): void
     {

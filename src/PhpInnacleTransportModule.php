@@ -1,7 +1,7 @@
 <?php
 
 /**
- * phpinnacle RabbitMQ transport module
+ * phpinnacle RabbitMQ transport module.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -71,7 +71,7 @@ final class PhpInnacleTransportModule implements ServiceBusModule
     }
 
     /**
-     * Apply Quality Of Service settings
+     * Apply Quality Of Service settings.
      *
      * @param int|null  $size
      * @param int|null  $count
@@ -87,7 +87,7 @@ final class PhpInnacleTransportModule implements ServiceBusModule
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function boot(ContainerBuilder $containerBuilder): void
     {
@@ -96,14 +96,14 @@ final class PhpInnacleTransportModule implements ServiceBusModule
         /** Default transport level destination */
         $destinationDefinition = new Definition(AmqpTransportLevelDestination::class, [
             '%service_bus.transport.amqp.default_destination_topic%',
-            '%service_bus.transport.amqp.default_destination_key%'
+            '%service_bus.transport.amqp.default_destination_key%',
         ]);
 
         $containerBuilder->addDefinitions([DeliveryDestination::class => $destinationDefinition]);
 
         /** RabbitMQ connection config */
         $connectionConfigDefinition = new Definition(AmqpConnectionConfiguration::class, [
-            '%service_bus.transport.amqp.dsn%'
+            '%service_bus.transport.amqp.dsn%',
         ]);
 
         $containerBuilder->addDefinitions([AmqpConnectionConfiguration::class => $connectionConfigDefinition]);
@@ -112,7 +112,7 @@ final class PhpInnacleTransportModule implements ServiceBusModule
         $qosConfigurationDefinition = new Definition(AmqpQoSConfiguration::class, [
             '%service_bus.transport.amqp.qos_size%',
             '%service_bus.transport.amqp.qos_count%',
-            '%service_bus.transport.amqp.qos_global%'
+            '%service_bus.transport.amqp.qos_global%',
         ]);
 
         $containerBuilder->addDefinitions([AmqpQoSConfiguration::class => $qosConfigurationDefinition]);
@@ -121,14 +121,14 @@ final class PhpInnacleTransportModule implements ServiceBusModule
         $transportDefinition = new Definition(PhpInnacleTransport::class, [
             new Reference(AmqpConnectionConfiguration::class),
             new Reference(AmqpQoSConfiguration::class),
-            new Reference('service_bus.logger')
+            new Reference('service_bus.logger'),
         ]);
 
         $containerBuilder->addDefinitions([Transport::class => $transportDefinition]);
     }
 
     /**
-     * Push parameters to container
+     * Push parameters to container.
      *
      * @param ContainerBuilder $containerBuilder
      *
@@ -145,7 +145,7 @@ final class PhpInnacleTransportModule implements ServiceBusModule
             'service_bus.transport.amqp.default_destination_key'   => $this->defaultDestinationRoutingKey,
         ];
 
-        foreach($parameters as $key => $value)
+        foreach ($parameters as $key => $value)
         {
             $containerBuilder->setParameter($key, $value);
         }
