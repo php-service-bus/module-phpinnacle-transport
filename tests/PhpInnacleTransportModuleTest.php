@@ -1,7 +1,7 @@
 <?php
 
 /**
- * phpinnacle RabbitMQ transport module.
+ * PHPinnacle RabbitMQ adapter.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
