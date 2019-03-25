@@ -34,7 +34,7 @@
   },
   "require": {
     "php": ">=7.2",
-    "php-service-bus/transport-phpinnacle": "^v3.0"
+    "php-service-bus/transport-phpinnacle": "^v3.2"
   },
   "require-dev": {
     "php-service-bus/code-style-config": "^v0.1",
@@ -43,7 +43,7 @@
     "vimeo/psalm": "^v3"
   },
   "prefer-stable": true,
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "scripts": {
     "psalm": "./vendor/bin/psalm --config=psalm.xml",
     "tests": "./vendor/bin/phpunit --configuration phpunit.xml --verbose",
