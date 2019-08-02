@@ -33,15 +33,15 @@
     }
   },
   "require": {
-    "php": ">=7.2",
-    "php-service-bus/transport-phpinnacle": "^v3.2"
+    "php": ">=7.3",
+    "php-service-bus/transport-phpinnacle": "v3.3.*"
   },
   "require-dev": {
     "php-service-bus/code-style-config": "^v0.1",
-    "symfony/dependency-injection": "^v4.2",
+    "symfony/dependency-injection": "4.3.*",
     "phpunit/phpunit": "^8",
     "vimeo/psalm": "^v3",
-    "phpstan/phpstan": "^0.11"
+    "phpstan/phpstan": "0.11.*"
   },
   "prefer-stable": true,
   "minimum-stability": "stable",
