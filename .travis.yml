@@ -8,9 +8,11 @@ php:
 matrix:
   allow_failures:
     - php: 7.4snapshot
-
-services:
-  - rabbitmq
+    
+addons:
+  apt:
+    packages:
+      - rabbitmq-server
 
 cache:
   directories:
