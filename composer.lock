@@ -767,16 +767,16 @@
         },
         {
             "name": "php-service-bus/transport-phpinnacle",
-            "version": "v3.3.1",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-phpinnacle.git",
-                "reference": "0a35a2a23d7092884f74b3348cbd36e46a78d45e"
+                "reference": "86121e17bc7af4e9ef4ac071de381710a61f0198"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/0a35a2a23d7092884f74b3348cbd36e46a78d45e",
-                "reference": "0a35a2a23d7092884f74b3348cbd36e46a78d45e",
+                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/86121e17bc7af4e9ef4ac071de381710a61f0198",
+                "reference": "86121e17bc7af4e9ef4ac071de381710a61f0198",
                 "shasum": ""
             },
             "require": {
@@ -804,9 +804,9 @@
             "authors": [
                 {
                     "name": "Masiukevich Maksim",
-                    "role": "Developer",
                     "email": "dev@async-php.com",
-                    "homepage": "https://github.com/mmasiukevich"
+                    "homepage": "https://github.com/mmasiukevich",
+                    "role": "Developer"
                 }
             ],
             "description": "phpinnacle RabbitMQ adapter",
@@ -817,7 +817,7 @@
                 "messaging",
                 "rabbitmq"
             ],
-            "time": "2019-08-02T17:22:42+00:00"
+            "time": "2019-09-05T12:22:50+00:00"
         },
         {
             "name": "phpinnacle/buffer",
