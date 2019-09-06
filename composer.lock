@@ -190,16 +190,16 @@
         },
         {
             "name": "amphp/dns",
-            "version": "v0.9.15",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/dns.git",
-                "reference": "2a3e7376f42b289230c0921aceaec5bbf253299d"
+                "reference": "493d014b58c14e29303a145b0be4cf272aa6644f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/dns/zipball/2a3e7376f42b289230c0921aceaec5bbf253299d",
-                "reference": "2a3e7376f42b289230c0921aceaec5bbf253299d",
+                "url": "https://api.github.com/repos/amphp/dns/zipball/493d014b58c14e29303a145b0be4cf272aa6644f",
+                "reference": "493d014b58c14e29303a145b0be4cf272aa6644f",
                 "shasum": ""
             },
             "require": {
@@ -210,6 +210,7 @@
                 "amphp/windows-registry": "^0.3",
                 "daverandom/libdns": "^2.0.1",
                 "ext-filter": "*",
+                "ext-json": "*",
                 "php": ">=7.0"
             },
             "require-dev": {
@@ -232,20 +233,20 @@
             ],
             "authors": [
                 {
-                    "name": "Bob Weinand",
-                    "email": "bobwei9@hotmail.com"
-                },
-                {
-                    "name": "Niklas Keller",
-                    "email": "me@kelunik.com"
+                    "name": "Chris Wright",
+                    "email": "addr@daverandom.com"
                 },
                 {
                     "name": "Daniel Lowrey",
                     "email": "rdlowrey@php.net"
                 },
                 {
-                    "name": "Chris Wright",
-                    "email": "addr@daverandom.com"
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
                 },
                 {
                     "name": "Aaron Piotrowski",
@@ -262,7 +263,7 @@
                 "dns",
                 "resolve"
             ],
-            "time": "2019-07-08T20:58:50+00:00"
+            "time": "2019-07-30T16:09:33+00:00"
         },
         {
             "name": "amphp/parser",
@@ -372,28 +373,31 @@
         },
         {
             "name": "amphp/socket",
-            "version": "v0.10.12",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/socket.git",
-                "reference": "e90cda8929462bc563351bf82753ff48d9796ddc"
+                "reference": "abc18f1786363ceee2555ffd7fe87e4eead2ce24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/socket/zipball/e90cda8929462bc563351bf82753ff48d9796ddc",
-                "reference": "e90cda8929462bc563351bf82753ff48d9796ddc",
+                "url": "https://api.github.com/repos/amphp/socket/zipball/abc18f1786363ceee2555ffd7fe87e4eead2ce24",
+                "reference": "abc18f1786363ceee2555ffd7fe87e4eead2ce24",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^2",
-                "amphp/byte-stream": "^1.1",
-                "amphp/dns": "^0.9",
-                "amphp/uri": "^0.1",
-                "php": ">=7.0"
+                "amphp/byte-stream": "^1.6",
+                "amphp/dns": "^1 || ^0.9",
+                "ext-openssl": "*",
+                "kelunik/certificate": "^1.1",
+                "league/uri-parser": "^1.4",
+                "php": ">=7.1"
             },
             "require-dev": {
+                "amphp/php-cs-fixer-config": "dev-master",
                 "amphp/phpunit-util": "^1",
-                "friendsofphp/php-cs-fixer": "^2.3",
+                "league/uri-schemes": "^1.2.1",
                 "phpunit/phpunit": "^6"
             },
             "type": "library",
@@ -412,16 +416,16 @@
             ],
             "authors": [
                 {
-                    "name": "Niklas Keller",
-                    "email": "me@kelunik.com"
-                },
-                {
                     "name": "Daniel Lowrey",
                     "email": "rdlowrey@gmail.com"
                 },
                 {
                     "name": "Aaron Piotrowski",
                     "email": "aaron@trowski.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
                 }
             ],
             "description": "Async socket connection / server tools for Amp.",
@@ -435,51 +439,7 @@
                 "tcp",
                 "tls"
             ],
-            "time": "2019-03-26T04:17:14+00:00"
-        },
-        {
-            "name": "amphp/uri",
-            "version": "v0.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amphp/uri.git",
-                "reference": "30065946d5c69f44c8a47bf8838244029984ff61"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amphp/uri/zipball/30065946d5c69f44c8a47bf8838244029984ff61",
-                "reference": "30065946d5c69f44c8a47bf8838244029984ff61",
-                "shasum": ""
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.3",
-                "phpunit/phpunit": "^6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Amp\\Uri\\": "src"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Niklas Keller",
-                    "email": "me@kelunik.com"
-                },
-                {
-                    "name": "Daniel Lowrey"
-                }
-            ],
-            "description": "Uri Parser and Resolver.",
-            "homepage": "https://github.com/amphp/uri",
-            "time": "2019-05-13T18:25:34+00:00"
+            "time": "2019-08-01T19:32:46+00:00"
         },
         {
             "name": "amphp/windows-registry",
@@ -561,6 +521,120 @@
                 "dns"
             ],
             "time": "2018-01-10T15:56:17+00:00"
+        },
+        {
+            "name": "kelunik/certificate",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kelunik/certificate.git",
+                "reference": "56542e62d51533d04d0a9713261fea546bff80f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kelunik/certificate/zipball/56542e62d51533d04d0a9713261fea546bff80f6",
+                "reference": "56542e62d51533d04d0a9713261fea546bff80f6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kelunik\\Certificate\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                }
+            ],
+            "description": "Access certificate details and transform between different formats.",
+            "keywords": [
+                "DER",
+                "certificate",
+                "certificates",
+                "openssl",
+                "pem",
+                "x509"
+            ],
+            "time": "2019-05-29T19:02:31+00:00"
+        },
+        {
+            "name": "league/uri-parser",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-parser.git",
+                "reference": "671548427e4c932352d9b9279fdfa345bf63fa00"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-parser/zipball/671548427e4c932352d9b9279fdfa345bf63fa00",
+                "reference": "671548427e4c932352d9b9279fdfa345bf63fa00",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpstan/phpstan-strict-rules": "^0.9.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "suggest": {
+                "ext-intl": "Allow parsing RFC3987 compliant hosts",
+                "league/uri-schemes": "Allow validating and normalizing URI parsing results"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "userland URI parser RFC 3986 compliant",
+            "homepage": "https://github.com/thephpleague/uri-parser",
+            "keywords": [
+                "parse_url",
+                "parser",
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url"
+            ],
+            "time": "2018-11-22T07:55:51+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -767,23 +841,23 @@
         },
         {
             "name": "php-service-bus/transport-phpinnacle",
-            "version": "v3.3.3",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-service-bus/transport-phpinnacle.git",
-                "reference": "86121e17bc7af4e9ef4ac071de381710a61f0198"
+                "reference": "5be4a9a1048d1b1d47a507e6c793bd6cb9881163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/86121e17bc7af4e9ef4ac071de381710a61f0198",
-                "reference": "86121e17bc7af4e9ef4ac071de381710a61f0198",
+                "url": "https://api.github.com/repos/php-service-bus/transport-phpinnacle/zipball/5be4a9a1048d1b1d47a507e6c793bd6cb9881163",
+                "reference": "5be4a9a1048d1b1d47a507e6c793bd6cb9881163",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3",
                 "php-service-bus/transport-amqp": "v3.3.*",
                 "php-service-bus/transport-common": "v3.3.*",
-                "phpinnacle/ridge": "v0.3.*"
+                "phpinnacle/ridge": "v1.0.*"
             },
             "require-dev": {
                 "php-service-bus/code-style-config": "v0.1.*",
@@ -817,7 +891,7 @@
                 "messaging",
                 "rabbitmq"
             ],
-            "time": "2019-09-05T12:22:50+00:00"
+            "time": "2019-09-06T13:13:08+00:00"
         },
         {
             "name": "phpinnacle/buffer",
@@ -876,21 +950,21 @@
         },
         {
             "name": "phpinnacle/ridge",
-            "version": "0.3",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpinnacle/ridge.git",
-                "reference": "dc608fe5327aa81c4673c14397e1457d83f1ff53"
+                "reference": "2bf38f78f9b8b8309161a552603a109e0491d9b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpinnacle/ridge/zipball/dc608fe5327aa81c4673c14397e1457d83f1ff53",
-                "reference": "dc608fe5327aa81c4673c14397e1457d83f1ff53",
+                "url": "https://api.github.com/repos/phpinnacle/ridge/zipball/2bf38f78f9b8b8309161a552603a109e0491d9b5",
+                "reference": "2bf38f78f9b8b8309161a552603a109e0491d9b5",
                 "shasum": ""
             },
             "require": {
-                "amphp/amp": "^2.0",
-                "amphp/socket": "^0.10",
+                "amphp/amp": "v2.2.*",
+                "amphp/socket": "^1",
                 "php": "^7.2",
                 "phpinnacle/buffer": "^1.0"
             },
@@ -916,9 +990,9 @@
             "authors": [
                 {
                     "name": "PHPinnacle",
-                    "role": "Developer",
                     "email": "dev@phpinnacle.com",
-                    "homepage": "https://phpinnacle.com"
+                    "homepage": "https://phpinnacle.com",
+                    "role": "Developer"
                 }
             ],
             "description": "PHPinnacle async AMQP client",
@@ -928,7 +1002,7 @@
                 "async",
                 "phpinnacle"
             ],
-            "time": "2019-06-24T18:49:53+00:00"
+            "time": "2019-09-06T13:10:43+00:00"
         },
         {
             "name": "ramsey/uuid",
