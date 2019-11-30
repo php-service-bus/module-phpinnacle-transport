@@ -28,41 +28,18 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 final class PhpInnacleTransportModule implements ServiceBusModule
 {
-    /**
-     * @var string
-     */
-    private $connectionDSN;
+    private string $connectionDSN;
 
-    /**
-     * @var string
-     */
-    private $defaultDestinationExchange;
+    private string $defaultDestinationExchange;
 
-    /**
-     * @var string|null
-     */
-    private $defaultDestinationRoutingKey;
+    private ?string $defaultDestinationRoutingKey;
 
-    /**
-     * @var int|null
-     */
-    private $qosSize;
+    private ?int $qosSize;
 
-    /**
-     * @var int|null
-     */
-    private $qosCount;
+    private ?int $qosCount;
 
-    /**
-     * @var bool|null
-     */
-    private $qosGlobal;
+    private ?bool $qosGlobal;
 
-    /**
-     * @param string      $connectionDSN
-     * @param string      $defaultDestinationExchange
-     * @param string|null $defaultDestinationRoutingKey
-     */
     public function __construct(string $connectionDSN, string $defaultDestinationExchange, ?string $defaultDestinationRoutingKey)
     {
         $this->connectionDSN                = $connectionDSN;
@@ -72,12 +49,6 @@ final class PhpInnacleTransportModule implements ServiceBusModule
 
     /**
      * Apply Quality Of Service settings.
-     *
-     * @param int|null  $size
-     * @param int|null  $count
-     * @param bool|null $isGlobal
-     *
-     * @return void
      */
     public function configureQos(?int $size = null, ?int $count = null, ?bool $isGlobal = null): void
     {
@@ -129,10 +100,6 @@ final class PhpInnacleTransportModule implements ServiceBusModule
 
     /**
      * Push parameters to container.
-     *
-     * @param ContainerBuilder $containerBuilder
-     *
-     * @return void
      */
     private function injectParameters(ContainerBuilder $containerBuilder): void
     {
