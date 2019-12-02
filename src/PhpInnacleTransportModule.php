@@ -29,16 +29,11 @@ use Symfony\Component\DependencyInjection\Reference;
 final class PhpInnacleTransportModule implements ServiceBusModule
 {
     private string $connectionDSN;
-
     private string $defaultDestinationExchange;
-
-    private ?string $defaultDestinationRoutingKey;
-
-    private ?int $qosSize;
-
-    private ?int $qosCount;
-
-    private ?bool $qosGlobal;
+    private ?string $defaultDestinationRoutingKey = null;
+    private ?int $qosSize = null;
+    private ?int $qosCount = null;
+    private ?bool $qosGlobal = null;
 
     public function __construct(string $connectionDSN, string $defaultDestinationExchange, ?string $defaultDestinationRoutingKey)
     {
